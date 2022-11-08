@@ -311,7 +311,7 @@ body {
 
 /*Design About section*/
 #about {
-    background: url(images/set.jpg) no-repeat;
+    background: url(set.jpg) no-repeat;
     background-size: cover;
     padding: 90px 0px 90px 0px;
     word-spacing: 3px;
@@ -358,7 +358,7 @@ body {
 
 /* details section design */
 #details{
-    background: linear-gradient(#000000c7, #0000), url(images/details.jpg) no-repeat;
+    background: linear-gradient(#000000c7, #0000), url(details.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding-top: 100px;
