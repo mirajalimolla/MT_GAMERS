@@ -29,7 +29,7 @@ function change_image(){
     for(let i =0; i<imgArr.length; i++){
     let num = Math.floor(Math.random() * imgArr.length);
     let set = imgArr[num];
-    document.querySelector(".cngImg").src=`images/${set}`;
+    document.querySelector(".cngImg").src=set;
 }
 }
 setInterval(() => {
