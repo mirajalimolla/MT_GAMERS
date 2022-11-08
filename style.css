@@ -265,16 +265,14 @@ body {
 #img_arrow big{
     color: red;
     font-size: 151px;
-    position: relative;
+    position: absolute;
     margin-top: 67px;
     left: -32px;
     font-weight: 500;
-    user-select: none;
     overflow: hidden;
 }
 .left_arrow{
     left: -7px;
-    margin-top: 68px;
     position: absolute;
     animation: left_image_moving 1s linear infinite;
 }
@@ -290,10 +288,10 @@ body {
     }
 }
 .right_arrow{
-    margin-top: -334px;
+    margin-top: -399px;
     animation: right_image_moving 1s linear infinite;
     font-weight: 500;
-    right: -71px;
+    right: 35px;
     position: absolute;
     font-size: 153px;
 }
