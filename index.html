@@ -186,7 +186,10 @@
 		<!-- Creare the video section -->
 		<section id="video_slider">
 			<!-- <i onclick="slideRight()" id="left_btn" class="arrow fa-solid fa-arrow-left"></i> -->
-			<b onclick="slideRight()" id="left_btn" class="arrow"><</b>
+			<div class="video_buttons">
+				<b onclick="slideRight()" id="left_btn" class="arrow"><</b>
+				<b onclick="slideLeft()" id="right_btn" class="arrow">></b>
+			</div>
 			<div class="slider_container">
 				<div class="slider_item">
 					<iframe width="300" height="300" style="margin-bottom: -4px;" dsrc="https://www.youtube.com/embed/_XMG9LXS6qU?autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
@@ -229,7 +232,6 @@
 				</div>
 			</div>
 			<!-- <i onclick="slideLeft()" id="right_btn" class="arrow fa-solid fa-arrow-right"></i> -->
-			<b onclick="slideLeft()" id="right_btn" class="arrow">></b>
 		</section>
 
 		<!-- Create footer section -->
