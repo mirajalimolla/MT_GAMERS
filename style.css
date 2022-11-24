@@ -7,6 +7,9 @@ body {
     font-family: sans-serif;
     overflow-x: hidden;
 }
+:root{
+    touch-action:pan-x pan-y;
+}
 
 /* Background video set */
 #video{
@@ -369,12 +372,21 @@ body {
 }
 
 /* Design the video section */
-#left_btn{
+.arrow{
+    display: flex !important;
+    background: #4a1515de;
+    padding: 0px 7px 6px 7px;
+    font-size: 30px;
+    color: #a17f7f;
     position: absolute;
-    left: 17px;
-    margin-top: 8rem;
     cursor: pointer;
     z-index: 1;
+    margin-top: 8rem;
+    align-items: center;
+    user-select: none;
+}
+#left_btn{
+    left: 17px;
     animation: left_moving 1s linear infinite;
     display: none;
 }
@@ -390,10 +402,7 @@ body {
     }
 }
 #right_btn{
-    position: absolute;
     right: 17px;
-    margin-top: -11.4rem;
-    cursor: pointer;
     animation: right_moving 1s linear infinite;
 }
 @keyframes right_moving{
@@ -408,13 +417,6 @@ body {
     }
 }
 
-#video_slider b{
-    background: #4a1515de;
-    padding: 0px 7px 6px 7px;
-    font-size: 29px;
-    color: #a17f7f;
-    user-select: none;
-}
 #video_slider{
     background: #100101fa;
     padding: 11px 0px 6px 0px;
@@ -439,6 +441,7 @@ body {
 #footer{
     background: black;
     padding: 50px 0px;
+    color: #898989;
 }
 .footer_container{
     text-align: center;
@@ -485,13 +488,15 @@ body {
 /* Set the Media query responsive the website */
 
 /* Responsive the header in logo and menu/links */
-@media screen and(max-width:900px){
+@media only screen and(max-width:900px){
     .image_image img{
-
         left: 8rem;
     }
+    body{
+        background-color: red;
+    }
 }
-@media screen and (max-width:821px){
+@media only screen and (max-width:821px){
     .logo img{
         height: 75px;
     }
@@ -502,7 +507,7 @@ body {
         font-size: 10px;
     }
 }
-@media screen and (max-width:676px){
+@media only screen and (max-width:676px){
     .logo img{
         height: 55px;
     }
@@ -513,7 +518,12 @@ body {
         font-size: 10px;
     }
 }
-@media screen and (max-width:545px){
+@media only screen and (max-width:600px){
+    .arrow{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width:545px){
     .menu li{
         margin: 0px 5px;
         font-size: 8px;
