@@ -18,30 +18,22 @@ let effect = new Typed('.typing', {
 });
 
 // Casual Image change
-let imgArr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"];
-
-// for(let i=0; i < imgArr; i++){
-//     console.log(imgArr[i]);
-// }
-
-
+let index = 0;
+let imgArr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg"];
 function change_image(){
-    for(let i =0; i<imgArr.length; i++){
-    let num = Math.floor(Math.random() * imgArr.length);
-    let set = imgArr[num];
-    document.querySelector(".cngImg").src=set;
+    console.log(document.querySelector(".cngImg").src=imgArr[index]);
+    if(++index < imgArr.length){
+            setTimeout(change_image, 2000);
+    }
 }
-}
-setInterval(() => {
-    change_image();
-}, 2000);
+change_image();
 
 // Video section sceolling arrow create
-
 let container = document.querySelector('#video_slider')
 let slider = document.querySelector('.slider_container');
 let slides = document.querySelector('.slider_container').length;
-let arrow = document.querySelector('.arrow');
+let left_arrow = document.querySelector('#left_btn');
+let right_arrow = document.querySelector('#right_btn');
 
 
 let currentPosition = 0;
@@ -80,13 +72,13 @@ function setParams(w) {
     currentMargin = - currentPosition * (100 / slidesPerPage);
     slider.style.marginLeft = currentMargin + '%';
     if (currentPosition > 0) {
-        buttons[0].classList.remove('inactive');
+        left_arrow.style.display="block";
     }
     if (currentPosition < slidesCount) {
-        buttons[1].classList.remove('inactive');
+        right_arrow.style.display="block";
     }
     if (currentPosition >= slidesCount) {
-        buttons[1].classList.add('inactive');
+        right_arrow.style.display="none";
     }
 }
 
@@ -99,10 +91,10 @@ function slideRight() {
         currentPosition--;
     };
     if (currentPosition === 0) {
-        buttons[0].classList.add('inactive');
+        left_arrow.style.display="none";
     }
     if (currentPosition < slidesCount) {
-        buttons[1].classList.remove('inactive');
+        right_arrow.style.display="block";
     }
 };
 
@@ -113,9 +105,9 @@ function slideLeft() {
         currentPosition++;
     };
     if (currentPosition == slidesCount) {
-        buttons[1].classList.add('inactive');
+        right_arrow.style.display="none";
     }
     if (currentPosition > 0) {
-        buttons[0].classList.remove('inactive');
+        left_arrow.style.display="block";
     }
 };
