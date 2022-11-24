@@ -22,33 +22,6 @@ body {
 }
 
 /* Header Design */
-#side_menu{
-    background:black;
-    color: white;
-    height: 100vh;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.side_menu_container{
-    width: max-content;
-    margin: auto;
-    text-align: center;
-}
-.side_menu_links ul{
-    list-style: none;
-}
-.side_menu_links ul li a{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    line-height: 4;
-    text-align: center;
-}
-.side_logo img{
-    height: 100px;
-}
 #header {
     max-width: 100vw;
     background: #323232;
@@ -101,40 +74,10 @@ body {
     margin: 10px 25px;
     height: 100px;
     transition: 0.3s;
+    user-select: none;
 }
 .logo img:hover {
     transform: scale(1.1);
-}
-@media screen and (max-width:821px){
-    .logo img{
-        height: 75px;
-    }
-    .menu li a{
-        font-size:13px;
-    }
-}
-@media screen and (max-width:676px){
-    .logo img{
-        height: 55px;
-    }
-    .menu li a{
-        font-size:9px;
-    }
-}
-@media screen and (max-width:550px){
-    .header_container{
-        max-width: none;
-    }
-}
-@media screen and (max-width:545px){
-    .menu li{
-        margin: 0px 5px;
-        font-size: 8px;
-    }
-    .logo img{
-        height: 45px;
-        margin:0px 3px;
-    }
 }
 
 /* Scroll the page and change the header background color */
@@ -164,7 +107,7 @@ body {
 .mySelf h1 {
     font-size: 50px;
 }
-.mySelf spam {
+.mySelf span {
     color: crimson;
     font-weight: bold;
 }
@@ -194,16 +137,15 @@ body {
     max-width: 80%;
     margin: auto;
 }
-.serice_header{
+.service_container h1{
     font-family: arial black;
-    margin: 0px auto 40px;
+    margin: 30px 0px;
     color: crimson;
-    max-width: 335px;
     display: block;
-    font-size: 26px;
     text-align: center;
+    font-size: 40px;
 }
-.serice_header h1::after{
+.service_container h1::after{
     content: "";
     border: 3px solid crimson;
     border-top-left-radius: 10px;
@@ -212,7 +154,7 @@ body {
     position: absolute;
     margin: 22px 0px 0px -361px;
 }
-.serice_header h1::before {
+.service_container h1::before {
     content: "";
     border: 3px solid crimson;
     border-top-right-radius: 10px;
@@ -232,6 +174,7 @@ body {
     background: repeating-linear-gradient(40deg, #6a1e29, transparent 100px);
     border-radius: 6px;
     text-align: center;
+    margin: 0px 5px 10px;
 }
 .box h2{
     font-size: 25px;
@@ -248,6 +191,7 @@ body {
 /* Dynamic image chaner design */
 #image{
     height: 398px;
+    user-select: none;
 }
 .immm{
     width: 100%;
@@ -289,9 +233,9 @@ body {
 }
 .right_arrow{
     margin-top: -399px;
-    animation: right_image_moving 1s linear infinite;
+    /* animation: right_image_moving 1s linear infinite; */
     font-weight: 500;
-    right: 35px;
+    right: 73px;
     position: absolute;
     font-size: 153px;
 }
@@ -358,6 +302,7 @@ body {
 #details{
     background: linear-gradient(#000000c7, #0000), url(details.jpg) no-repeat;
     background-size: cover;
+    object-position: center center;
     background-attachment: fixed;
     padding-top: 100px;
 }
@@ -365,14 +310,15 @@ body {
     max-width: 80%;
     margin: auto;
 }
-.heading_details{
+.details_container h1{
     font-family: arial black;
-    max-width: 373px;
-    margin: 0px auto 70px;
+    margin: 30px 0px;
     color: crimson;
-    font-size: 26px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
 }
-.heading_details h1::after{
+.details_container h1::after{
     content: "";
     border: 3px solid crimson;
     border-top-left-radius: 10px;
@@ -381,7 +327,7 @@ body {
     position: absolute;
     margin: 22px 0px 0px -399px;
 }
-.heading_details h1::before {
+.details_container h1::before {
     content: "";
     border: 3px solid crimson;
     border-top-right-radius: 10px;
@@ -405,6 +351,7 @@ body {
     object-fit: cover;
     margin: 5px 0px;
     box-shadow: 0px 0px 22px black;
+    user-select: none;
 }
 .image_details h2{
     font-size: 40px;
@@ -429,6 +376,7 @@ body {
     cursor: pointer;
     z-index: 1;
     animation: left_moving 1s linear infinite;
+    display: none;
 }
 @keyframes left_moving{
     0%{
@@ -459,6 +407,7 @@ body {
         margin-right: 10px;
     }
 }
+
 #video_slider b{
     background: #4a1515de;
     padding: 0px 7px 6px 7px;
@@ -470,6 +419,7 @@ body {
     background: #100101fa;
     padding: 11px 0px 6px 0px;
     overflow: clip;
+    user-select: none;
 }
 .slider_container{
     display: flex;
@@ -530,3 +480,51 @@ body {
 .copyright big{
     font-weight: bold;
 }
+
+
+/* Set the Media query responsive the website */
+
+/* Responsive the header in logo and menu/links */
+@media screen and(max-width:900px){
+    .image_image img{
+
+        left: 8rem;
+    }
+}
+@media screen and (max-width:821px){
+    .logo img{
+        height: 75px;
+    }
+    .menu li a{
+        font-size:13px;
+    }
+    h1{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:676px){
+    .logo img{
+        height: 55px;
+    }
+    .menu li a{
+        font-size:9px;
+    }
+    h1{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:545px){
+    .menu li{
+        margin: 0px 5px;
+        font-size: 8px;
+    }
+    .logo img{
+        height: 45px;
+        margin:0px 3px;
+    }
+    h1{
+        font-size: 10px;
+    }
+}
+
+/* Responsive the image text in home bar */
