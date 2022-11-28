@@ -1,7 +1,20 @@
+/* Disable the arrow in input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Design the home page */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body {
     font-family: sans-serif;
@@ -373,7 +386,6 @@ body {
 
 /* Design the video section */
 .arrow{
-    display: flex !important;
     background: #4a1515de;
     padding: 0px 7px 6px 7px;
     font-size: 30px;
@@ -484,9 +496,6 @@ body {
     font-weight: bold;
 }
 
-
-/* Set the Media query responsive the website */
-
 /* Responsive the header in logo and menu/links */
 @media only screen and(max-width:900px){
     .image_image img{
@@ -537,4 +546,65 @@ body {
     }
 }
 
-/* Responsive the image text in home bar */
+/* Styling the Regestration form */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+#regestration{
+    background: linear-gradient(#0000002b, #00000094), url(contact_img.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.reg_container{
+    height: 84vh;
+    width: 87vw;
+}
+.reg_container h1{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 30px;
+}
+.form_container{
+    width: 100%;
+    display: grid;
+    justify-items: end;
+}
+.form{
+    width: 50%;
+    display: grid;
+    position: relative;
+    right: 0;
+}
+.form input{
+    padding: 12px 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    border: 2px solid #0000002b;
+    border-radius: 5px;
+    background: url(set.jpg) fixed;
+    color: #ffffffc7;
+}
+.form p{
+    color: #af0303;
+    margin: 0px 0px 10px 10px;
+    font-size: 15px;
+    visibility: hidden;
+}
+.passIcon i{
+    position: absolute;
+    right: 10px;
+    margin-top: -30px;
+    color: white;
+    cursor: pointer;
+}
+#submit{
+    width: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+}
