@@ -23,17 +23,16 @@ let imgArr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.
 
 function change_image(){
     let index = count % imgArr.length;
-    console.log(document.querySelector(".cngImg").src=imgArr[index]);
+    document.querySelector(".cngImg").src=imgArr[index];
     count++;
 }
 setInterval(change_image, 2000);
 
-// Video section sceolling arrow create
-let container = document.querySelector('#video_slider')
-let slider = document.querySelector('.slider_container');
-let slides = document.querySelector('.slider_container').length;
-let left_arrow = document.querySelector('#left_btn');
-let right_arrow = document.querySelector('#right_btn');
+// Write the code for video section
+let container = document.getElementById('container')
+let slider = document.getElementById('slider');
+let slides = document.getElementsByClassName('slide').length;
+let buttons = document.getElementsByClassName('arrow');
 
 
 let currentPosition = 0;
@@ -72,13 +71,13 @@ function setParams(w) {
     currentMargin = - currentPosition * (100 / slidesPerPage);
     slider.style.marginLeft = currentMargin + '%';
     if (currentPosition > 0) {
-        left_arrow.style.display="block";
+        buttons[0].style.display="block";
     }
     if (currentPosition < slidesCount) {
-        right_arrow.style.display="block";
+        buttons[1].style.display="block";
     }
     if (currentPosition >= slidesCount) {
-        right_arrow.style.display="none";
+        buttons[1].style.display="none";
     }
 }
 
@@ -91,10 +90,10 @@ function slideRight() {
         currentPosition--;
     };
     if (currentPosition === 0) {
-        left_arrow.style.display="none";
+        buttons[0].style.display="none";
     }
     if (currentPosition < slidesCount) {
-        right_arrow.style.display="block";
+        buttons[1].style.display="block";
     }
 };
 
@@ -105,9 +104,9 @@ function slideLeft() {
         currentPosition++;
     };
     if (currentPosition == slidesCount) {
-        right_arrow.style.display="none";
+        buttons[1].style.display="none";
     }
     if (currentPosition > 0) {
-        left_arrow.style.display="block";
+        buttons[0].style.display="block";
     }
 };
