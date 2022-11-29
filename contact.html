@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>REGESTRATION IN MT GAMERS</title>
     <style>
@@ -20,7 +20,7 @@
         <div class="reg_container">
             <h1>REGESTRATION IN MT GAMERS</h1>
             <div class="form_container">
-                <form class="form" method="post" >
+                <form class="form" method="post" action="active_email.php">
                     <div class="form_control">
                         <input type="text" id="name" placeholder="Enter your full name" autocomplete="off" >
                         <p></p>
@@ -53,7 +53,7 @@
             </div>
         </div>
     </section>
-<!-- <script src="script.js"></script> -->
+
 <script>
     // Target all input and button
     let form = document.querySelector(".form");
@@ -77,7 +77,12 @@
         let numberVal = number.value.trim();
         let passwordVal = password.value.trim();
         let cpasswordVal = cpassword.value.trim();
-        let sign = false;
+
+        let nameReturn = false;
+        let emailReturn = false;
+        let numberReturn = false;
+        let passReturn = false;
+        let cpassReturn = false;
         
         // Validation the name
         if(nameVal  === ""){
@@ -85,14 +90,14 @@
         }else if(nameVal.length < 5){
             setErrmsg(name, "The name is min 5 char");
         }else{
-            sign = true;
-            console.log("Success name");
+            setSuccess(name, "Name");
+            nameReturn = true;
         }
 
         // more Email validation
         function isEmail(){
             let atSymbol = emailVal.indexOf("@");
-            if(atSymbol < 4) return false;
+            if(atSymbol < 2) return false;
             let dot = emailVal.lastIndexOf(".");
             if(dot <= atSymbol + 5) return false;
             if(dot == atSymbol.length - 1) return false;
@@ -105,8 +110,8 @@
         }else if(!isEmail()){
             setErrmsg(email, "Please enter a valid email");
         }else{
-            sign = true;
-            console.log("Success email");
+            setSuccess(email, "Email field");
+            emailReturn = true;
         }
 
         // Validation the number
@@ -115,8 +120,8 @@
         } else if(numberVal.length !== 10){
             setErrmsg(number, "Please Enter the valid number 10 digite");
         }else{
-            sign = true;
-            console.log("Success number");
+            setSuccess(number, "Number field");
+            numberReturn = true;
         }
 
         // Validation the password
@@ -125,8 +130,8 @@
         } else if(passwordVal.length < 8){
             setErrmsg(password, "The Password is min 8 char");
         }else{
-            sign = true;
-            console.log("Success password");
+            setSuccess(password, "Password field");
+            passReturn = true;
         }
 
         // Validation the confirm password
@@ -135,32 +140,31 @@
         } else if((passwordVal !== cpasswordVal) && (password !== cpassword)){
             setErrmsg(cpassword, "The Password dos'n mached");
         }else{
-            sign = true;
-            console.log("Success confirm");
+            setSuccess(cpassword, "confirm password field");
+            cpassReturn = true;
         }
-
-        if(sign === false){
-            console.log("Sorry your details is wrong");
-        }else{
-            window.location.href = "active_email.php";
+        
+        if((nameReturn== true) && (emailReturn == true) && (numberReturn == true) && (passReturn == true) && (cpassReturn == true)){
+            window.location.href = "active_email.html";
         }
     }
-
     
-    
+    // Set user error 
     function setErrmsg(input, errorMsg){
         input.style.border="2px solid #af0303";
         let inputDiv = input.parentElement;
         inputDiv.querySelector("p").innerHTML=errorMsg;
         inputDiv.querySelector("p").style.visibility = "visible";
+        inputDiv.querySelector("p").style.marginBottom = "10px";
     };
 
-
-    function setSuccess(){
-        console.log("Your information is pending");
+    // Set user success
+    function setSuccess(box, text){
+        box.style.border ="2px solid #0000002b";
+        let targetErr = box.parentElement;
+        targetErr.querySelector("p").style.visibility = "hidden";
+        targetErr.querySelector("p").style.marginBottom = "0px";
     }
-
-
 
     // Taret all password Icon
     let passShow = document.querySelector("#passShow");
