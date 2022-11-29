@@ -18,15 +18,15 @@ let effect = new Typed('.typing', {
 });
 
 // Casual Image change
-let index = 0;
+let count = 0;
 let imgArr = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg"];
+
 function change_image(){
+    let index = count % imgArr.length;
     console.log(document.querySelector(".cngImg").src=imgArr[index]);
-    if(++index < imgArr.length){
-            setTimeout(change_image, 2000);
-    }
+    count++;
 }
-change_image();
+setInterval(change_image, 2000);
 
 // Video section sceolling arrow create
 let container = document.querySelector('#video_slider')
