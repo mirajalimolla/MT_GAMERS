@@ -45,10 +45,10 @@ body {
 }
 .header_container {
     display: flex;
-    max-width: max-content;
+    max-width: 93%;
     margin: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .menu{
     display: flex;
@@ -365,7 +365,7 @@ body {
 .image img{
     height: 280px;
     object-fit: cover;
-    margin: 5px 30px;
+    margin: 100px 130px;
     box-shadow: 0px 0px 22px black;
     user-select: none;
 }
