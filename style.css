@@ -365,7 +365,7 @@ body {
 .image img{
     height: 280px;
     object-fit: cover;
-    margin: 5px 0px;
+    margin: 5px 30px;
     box-shadow: 0px 0px 22px black;
     user-select: none;
 }
@@ -375,7 +375,6 @@ body {
     color: #9f6f17;
 }
 .image_details p{
-    font-family: 'Playfair Display', serif;
     font-size: 19px;
     word-spacing: -1px;
     line-height: 30px;
@@ -480,6 +479,10 @@ body {
 .footer_menu ul{
     list-style: none;
     float: left;
+    padding: 0px;
+}
+.footer_menu ul:last-child{
+    padding-left: 30px;
 }
 .footer_menu a{
     text-decoration: none;
@@ -607,6 +610,40 @@ body {
     width: 50%;
     margin: 10px auto;
     cursor: pointer;
+}
+.login{
+    width: 100%;
+    margin: -2px auto 0px;
+    text-align: center;
+}
+.login small{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c3790c;
+    display: block;
+}
+.login small::before{
+    content: "";
+    width: 25%;
+    display: inline-block;
+    background: #9d9d9d;
+    padding: 1px;
+    margin-bottom: 4px;
+}
+.login small::after{
+    content: "";
+    width: 26%;
+    display: inline-block;
+    background: #9d9d9d;
+    padding: 1px;
+    margin-bottom: 4px;
+    margin-left: -2px;
+}
+.login a{
+    color: #9d9d9d;
+    margin-top: 3px;
+    display: block;
+    font-weight: 900;
 }
 
 @media only screen and (max-width:860px){
