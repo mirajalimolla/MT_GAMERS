@@ -18,6 +18,7 @@ input[type=number] {
 body {
     font-family: sans-serif;
     overflow-x: hidden;
+    user-select: none;
 }
 :root{
     touch-action:pan-x pan-y;
@@ -91,7 +92,6 @@ body {
     margin: 10px 25px;
     height: 100px;
     transition: 0.3s;
-    user-select: none;
 }
 .logo img:hover {
     transform: scale(1.1);
@@ -208,7 +208,6 @@ body {
 /* Dynamic image chaner design */
 #image{
     height: 398px;
-    user-select: none;
 }
 .immm{
     width: 100%;
@@ -371,7 +370,6 @@ body {
     height: 280px;
     object-fit: cover;
     box-shadow: 0px 0px 22px black;
-    user-select: none;
 }
 .image_details {
     display: grid;
@@ -407,7 +405,6 @@ body {
     cursor: pointer;
     z-index: 1;
     margin-top: 8rem;
-    user-select: none;
 }
 #left_btn{
     left: 17px;
@@ -444,7 +441,6 @@ body {
 #container {
     background: #100101fa;
     overflow: clip;
-    user-select: none;
 }
 #slider-container {
     width: 100%;
