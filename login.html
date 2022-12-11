@@ -7,6 +7,52 @@
     <title>Login in MT GAMERS</title>
 </head>
 <body>
-    <h1>Please wait the Login page is pending</h1>
+    <section id="login">
+        <div class="set_log_bg">
+            <div class="log_container">
+                <h1>LOGIN FORM</h1>
+                <form id="log_form">
+                    <div class="log_form">
+                        <div class="login_form_control">
+                            <input type="text" placeholder="Enter your email or phone" name="log_name" id="email" autocomplete="off" >
+                            <p>Err</p>
+                        </div>
+                        <div class="login_form_control">
+                            <input type="password" placeholder="Enter your password" id="password" name="log_password" id="password" autocomplete="off" >
+                            <div class="login_passIcon">
+                                <i id="passHide" class="fa-solid fa-eye"></i>
+                                <i id="passShow" class="fa-solid fa-eye-slash"></i>
+                            </div>
+                            <p>Err</p>
+                        </div>
+                        <input type="submit" value="Log in" class="log_submit">
+                    </div>                    
+                    <div class="contact">
+                        <small>or</small>
+                        <a href="contact.php">create a new Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script>
+    
+
+    // Password icon show and hide
+    let password = document.querySelector("#password");
+    let show = document.querySelector("#passShow");
+    let hide = document.querySelector("#passHide");
+
+    show.addEventListener('click', function(){
+        password.type = "text";
+        show.style.display = "none";
+        hide.style.display = "block";
+    });
+    hide.addEventListener('click', function(){
+        password.type = "password";
+        hide.style.display = "none";
+        show.style.display = "block";
+    });
 </body>
 </html>
