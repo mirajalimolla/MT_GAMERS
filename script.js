@@ -114,3 +114,5 @@ function slideLeft() {
 function click(){
     document.querySelector(".home").click();
 }
+
+click();
