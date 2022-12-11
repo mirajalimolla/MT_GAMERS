@@ -500,7 +500,6 @@ body {
     }
 }
 
-
 /* Footer design */
 #footer{
     background: black;
@@ -605,7 +604,7 @@ body {
 /* Styling the Regestration form */
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 #regestration{
-    background: linear-gradient(#0000002b, #00000094), url(contact_img.jpg);
+    background: linear-gradient(to bottom, transparent, transparent, #00000073, #000000b0, #000000a3), url(contact_img.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -647,10 +646,11 @@ body {
     color: #ffffffc7;
 }
 .form p{
-    color: #af0303;
+    color: #ff0000c2;
     margin: 0px 0px 10px 10px;
     font-size: 15px;
     visibility: hidden;
+    font-weight: bold;
 }
 .passIcon i{
     position: absolute;
@@ -660,9 +660,17 @@ body {
     cursor: pointer;
 }
 #submit{
-    width: 50%;
     margin: 10px auto;
     cursor: pointer;
+    padding: 12px 5px;
+    width: 50%;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: url(set.jpg) fixed;
+    color: #ffffffc7;
 }
 .login{
     width: 100%;
@@ -682,10 +690,11 @@ body {
     background: #9d9d9d;
     padding: 1px;
     margin-bottom: 4px;
+    margin-left: 7.1px;
 }
 .login small::after{
     content: "";
-    width: 26%;
+    width: 25%;
     display: inline-block;
     background: #9d9d9d;
     padding: 1px;
@@ -714,5 +723,135 @@ body {
     }
     .form{
         width: 100%;
+    }
+}
+
+
+/* Design the Login form */
+#login{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    overflow: hidden;
+}
+#login img{
+    height: 100%;
+    width: 100%;
+    animation: img_zoom 1s linear infinite;
+}
+.set_log_bg{
+    height: 100%;
+    width: 100%;
+    background: url(login.png) no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    /* animation: img_zoom 1s linear infinite; */
+    transition: 1s;
+}
+@keyframes img_zoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(3);
+    }
+}
+
+.log_container{
+    background: white;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+    width: 35%;
+}
+.log_container h1{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 15px 0px;
+}
+#log_form input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    margin: 5px 0px;
+    border: 2px solid #00000070;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.log_submit{
+    width: 50% !important;
+    margin: auto !important;
+    background: green;
+    border: none !important;
+    padding: 13px !important;
+    font-size: 16px !important;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px !important;
+}
+.contact{
+    width: 100%;
+    margin: 10px auto 0px;
+    text-align: center;
+}
+.contact small{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c3790c;
+    display: block;
+}
+.contact small::before{
+    content: "";
+    width: 25%;
+    display: inline-block;
+    background: #9d9d9d;
+    padding: 1px;
+    margin-bottom: 4px;
+    margin-left: 4.1px;
+}
+.contact small::after{
+    content: "";
+    width: 25%;
+    display: inline-block;
+    background: #9d9d9d;
+    padding: 1px;
+    margin-bottom: 4px;
+    margin-left: -2px;
+}
+.contact a{
+    color: #545454;
+    margin-top: 4px;
+    display: block;
+    font-weight: 600;
+}
+.login_passIcon{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+}
+.login_passIcon i{
+    position: absolute;
+    margin-top: -32px;
+    cursor: pointer;
+    color: #565656;
+}
+.login_form_control p{
+    text-align: left;
+    color: red;
+    font-weight: 700;
+    margin-left: 15px;
+    font-size: 15px;
+    display: none;
+}
+@media screen and (max-width:920px){
+    .log_container{
+        width: 70%;
+    }
+}
+@media screen and (max-width:550px){
+    .log_container h1{
+        font-size: 25px;
     }
 }
