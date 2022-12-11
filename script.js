@@ -1,5 +1,3 @@
-document.querySelector(".home").click();
-
 // Set header scrolling effect to change background and position
 $(function header() {
     $(window).on("scroll", function() {
