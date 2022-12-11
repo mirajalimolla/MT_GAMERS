@@ -110,3 +110,7 @@ function slideLeft() {
         buttons[0].style.display="block";
     }
 };
+
+function click(){
+    document.querySelector(".home").click();
+}
