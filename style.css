@@ -529,21 +529,19 @@ body {
     display: auto;
 }
 .footer_links{
-    displa:flex;
+    display: flex;
 }
 .footer_menu ul{
     list-style: none;
     float: left;
     padding: 0px;
 }
-.footer_menu ul:last-child{
-    padding-left: 30px;
-}
 .footer_menu a{
     text-decoration: none;
     display: flex;
     font-weight: 700;
     color:inherit;
+    width: 76px;
 }
 .footer_menu b{
     float: left;
@@ -795,7 +793,6 @@ body {
     margin-top: 10px !important;
 }
 .contact{
-    width: 100%;
     margin: 10px auto 0px;
     text-align: center;
 }
