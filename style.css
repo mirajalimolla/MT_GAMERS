@@ -792,17 +792,17 @@ body {
     cursor: pointer;
     margin-top: 10px !important;
 }
-.contact{
+.login_or{
     margin: 10px auto 0px;
     text-align: center;
 }
-.contact small{
+.login_or small{
     font-size: 20px;
     font-weight: bold;
     color: #c3790c;
     display: block;
 }
-.contact small::before{
+.login_or small::before{
     content: "";
     width: 25%;
     display: inline-block;
@@ -811,7 +811,7 @@ body {
     margin-bottom: 4px;
     margin-left: 4.1px;
 }
-.contact small::after{
+.login_or small::after{
     content: "";
     width: 25%;
     display: inline-block;
@@ -820,7 +820,7 @@ body {
     margin-bottom: 4px;
     margin-left: -2px;
 }
-.contact a{
+.login_or a{
     color: #545454;
     margin-top: 4px;
     display: block;
