@@ -365,7 +365,7 @@ body {
 
 /*Design About section*/
 #about {
-    background: url(images/set.jpg) no-repeat;
+    background: url(set.jpg) no-repeat;
     background-size: cover;
     padding: 90px 0px 90px 0px;
     word-spacing: 3px;
@@ -418,7 +418,7 @@ body {
 
 /* details section design */
 #details {
-    background: linear-gradient(#000000c7, #0000), url(images/details.jpg) no-repeat;
+    background: linear-gradient(#000000c7, #0000), url(details.jpg) no-repeat;
     background-size: cover;
     object-position: center center;
     background-attachment: fixed;
@@ -723,7 +723,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 #regestration {
-    background: linear-gradient(to bottom, transparent, transparent, #00000073, #000000b0, #000000a3), url(images/contact_img.jpg);
+    background: linear-gradient(to bottom, transparent, transparent, #00000073, #000000b0, #000000a3), url(contact_img.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -766,7 +766,7 @@ body {
     outline: none;
     border: 2px solid #0000002b;
     border-radius: 5px;
-    background: url(images/set.jpg) fixed;
+    background: url(set.jpg) fixed;
     color: #ffffffc7;
 }
 
@@ -796,7 +796,7 @@ body {
     outline: none;
     border: none;
     border-radius: 5px;
-    background: url(images/set.jpg) fixed;
+    background: url(set.jpg) fixed;
     color: #ffffffc7;
 }
 
@@ -883,7 +883,7 @@ body {
 .set_log_bg {
     height: 100%;
     width: 100%;
-    background: url(images/login.png) no-repeat;
+    background: url(login.png) no-repeat;
     background-size: cover;
     display: grid;
     place-items: center;
@@ -1030,7 +1030,7 @@ body {
 #chat {
     height: 100vh;
     width: 100vw;
-    background: url("images/group_cat.jpg") no-repeat;
+    background: url("group_cat.jpg") no-repeat;
     background-size: cover;
     display: grid;
     place-items: center;
