@@ -296,6 +296,8 @@ body {
 #image {
     height: 398px;
     position: relative;
+    border:1px solid orange;
+    overflow:hidden;
 }
 
 .immm {
