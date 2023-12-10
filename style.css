@@ -295,6 +295,7 @@ body {
 /* Dynamic image chaner design */
 #image {
     height: 398px;
+    position: relative;
 }
 
 .immm {
@@ -312,20 +313,18 @@ body {
     left: 6rem;
 }
 
-#img_arrow big {
+#img_arrow {
     color: red;
     font-size: 151px;
     position: absolute;
-    margin-top: 67px;
-    left: -32px;
+    top: 40px;
     font-weight: 500;
     overflow: hidden;
 }
 
 .left_arrow {
-    left: -7px;
-    position: absolute;
     animation: left_image_moving 1s linear infinite;
+    left: -42px;
 }
 
 @keyframes left_image_moving {
@@ -344,12 +343,8 @@ body {
 }
 
 .right_arrow {
-    margin-top: -399px;
-    /* animation: right_image_moving 1s linear infinite; */
-    font-weight: 500;
-    right: 73px;
-    position: absolute;
-    font-size: 153px;
+    right: -42px;
+    animation: right_image_moving 1s linear infinite;
 }
 
 @keyframes right_image_moving {
@@ -370,7 +365,7 @@ body {
 
 /*Design About section*/
 #about {
-    background: url(set.jpg) no-repeat;
+    background: url(images/set.jpg) no-repeat;
     background-size: cover;
     padding: 90px 0px 90px 0px;
     word-spacing: 3px;
@@ -423,7 +418,7 @@ body {
 
 /* details section design */
 #details {
-    background: linear-gradient(#000000c7, #0000), url(details.jpg) no-repeat;
+    background: linear-gradient(#000000c7, #0000), url(images/details.jpg) no-repeat;
     background-size: cover;
     object-position: center center;
     background-attachment: fixed;
@@ -728,7 +723,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 
 #regestration {
-    background: linear-gradient(to bottom, transparent, transparent, #00000073, #000000b0, #000000a3), url(contact_img.jpg);
+    background: linear-gradient(to bottom, transparent, transparent, #00000073, #000000b0, #000000a3), url(images/contact_img.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -771,7 +766,7 @@ body {
     outline: none;
     border: 2px solid #0000002b;
     border-radius: 5px;
-    background: url(set.jpg) fixed;
+    background: url(images/set.jpg) fixed;
     color: #ffffffc7;
 }
 
@@ -801,7 +796,7 @@ body {
     outline: none;
     border: none;
     border-radius: 5px;
-    background: url(set.jpg) fixed;
+    background: url(images/set.jpg) fixed;
     color: #ffffffc7;
 }
 
@@ -888,7 +883,7 @@ body {
 .set_log_bg {
     height: 100%;
     width: 100%;
-    background: url(login.png) no-repeat;
+    background: url(images/login.png) no-repeat;
     background-size: cover;
     display: grid;
     place-items: center;
@@ -1035,7 +1030,7 @@ body {
 #chat {
     height: 100vh;
     width: 100vw;
-    background: url("group_cat.jpg") no-repeat;
+    background: url("images/group_cat.jpg") no-repeat;
     background-size: cover;
     display: grid;
     place-items: center;
@@ -1083,15 +1078,15 @@ body {
     display: block;
 }
 
-#msg-option{
+#msg-option {
     border: 1px solid red;
     font-size: 20px;
     width: 20px;
-    margin-left:10px;
+    margin-left: 10px;
     color: green;
 }
 
-.option-box{
+.option-box {
     background-color: white;
     border-radius: 10px;
     margin-left: -10px;
@@ -1101,18 +1096,18 @@ body {
     right: -70px;
 }
 
-.option-box ul{
+.option-box ul {
     list-style: none;
 }
 
-.option-box li{
+.option-box li {
     padding: 10px 7px;
     font-size: 13px;
     font-weight: 900;
     line-height: 5px;
 }
 
-.option-box li:hover{
+.option-box li:hover {
     background-color: #c7c7c7fa;
 }
 
@@ -1120,7 +1115,7 @@ body {
     border-block: 1px solid black;
 }
 
-.option{
+.option {
     display: block;
 }
 
@@ -1152,7 +1147,7 @@ body {
     font-size: 15px;
 }
 
-.removeOption{
+.removeOption {
     display: block;
 }
 
@@ -1204,7 +1199,6 @@ body {
     border-radius: 10px;
     cursor: pointer;
 }
-
 
 @media screen and (max-width:1110px) {
     .active_form {
